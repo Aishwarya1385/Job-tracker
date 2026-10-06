@@ -1,3 +1,7 @@
-jobs.db
-__pycache__/
-.streamlit/secrets.toml
+[theme]
+base = "dark"
+primaryColor = "#2F7BFF"
+backgroundColor = "#06112B"
+secondaryBackgroundColor = "#08122B"
+textColor = "#F1F5FF"
+font = "sans serif"
