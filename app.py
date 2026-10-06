@@ -162,12 +162,17 @@ st.markdown(
         font-weight: 800;
         letter-spacing: -0.02em;
         line-height: 1.12;
-        color: #FFFFFF;
-        text-shadow: 0 0 28px rgba(47, 123, 255, 0.55);
+        /* whiter, icy gradient across the main title */
+        background: linear-gradient(90deg, #FFFFFF 0%, #EAF3FF 45%, #BBD8FF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 18px rgba(47, 123, 255, 0.45));
     }
 
+    /* accent part: soft blue-to-cyan shading */
     .app-title span {
-        background: linear-gradient(90deg, #7DB2FF, #5EE7F5);
+        background: linear-gradient(90deg, #A9D0FF 0%, #6FB4FF 50%, #5EE7F5 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1149,8 +1154,8 @@ def build_timeline(frame, today_date):
 st.markdown(
     '<div class="app-header"><div>'
     '<div class="app-eyebrow"><span class="dot"></span>JOB TRACKER</div>'
-    '<h1 class="app-title">Find it. Track it., '
-    '<span> Land it.</span></h1>'
+    '<h1 class="app-title">Find it. Track it. '
+    '<span>Land it.</span></h1>'
     '</div></div>',
     unsafe_allow_html=True,
 )
@@ -1540,4 +1545,3 @@ st.markdown(
     '<div class="app-footer">JOB TRACKER · KEEP YOUR SEARCH ORGANIZED</div>',
     unsafe_allow_html=True,
 )
-# To run the code streamlit run app.py   
